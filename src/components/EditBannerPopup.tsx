@@ -1,10 +1,9 @@
-"use client";
 import React, { useRef, useState } from "react";
 import ImageInput from "./ImageInput";
 
 interface EditBannerPopupProps {
   banner: {
-    id: number;
+    _id: string;
     title: string;
     description: string;
     cta: string;
@@ -127,7 +126,7 @@ const EditBannerPopup: React.FC<EditBannerPopupProps> = ({
             type="text"
             className="w-full border border-gray-300 rounded p-2"
             value={description}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           />
         </div>
         <button
